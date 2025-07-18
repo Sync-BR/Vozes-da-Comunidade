@@ -3,7 +3,7 @@ package com.vozesdacomunidade.init.service;
 import com.vozesdacomunidade.init.handle.exception.ResourceAlreadyExistsException;
 import com.vozesdacomunidade.init.model.entity.ClientEntity;
 import com.vozesdacomunidade.init.repository.ClientRepository;
-import com.vozesdacomunidade.init.service.implement.ImplementExtends;
+import com.vozesdacomunidade.init.service.interfaces.ServiceInterface;
 import com.vozesdacomunidade.init.valid.EmailValidate;
 import com.vozesdacomunidade.init.valid.PhoneValidate;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class ClientService implements ImplementExtends<ClientEntity> {
+public class ClientService implements ServiceInterface<ClientEntity> {
     private final EmailValidate validatorEmail;
     private final PhoneValidate validatorPhone;
 
